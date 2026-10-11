@@ -1,0 +1,619 @@
+  
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: lime;
+    color: #000000;
+    padding: 10px 15px;
+}
+
+nav li{
+    text-align: center;
+    margin-left: auto;
+}
+
+nav ul {
+    list-style: none; 
+    display: flex;
+    gap: 20px; 
+    justify-content: flex-start; 
+}
+
+nav a {
+    color: #ffffff; 
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+.header-logo {
+    height: 130px;             
+    width: auto;               
+    object-fit: contain;
+    margin-right: auto;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;       
+    justify-content: space-between;
+    width: 100%;
+}    
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    padding: 35px;
+}
+
+.menu li {
+    color: white;
+    font-size: 20px;
+    list-style: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.menu li a{
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: #b9ae0b;
+    text-decoration: underline;
+}
+
+/*seccion productos*/
+
+.hero-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(180deg, #050505 0%, #000000 100%);
+    border-bottom: 1px solid #111;
+}
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    color: #aaaaaa;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+/* Botones Estilizados */
+.btn-hero-primary {
+    background-color: lime;
+    color: #000;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.btn-hero-primary:hover {
+    background-color: #00cc00;
+    transform: translateY(-2px);
+}
+.btn-hero-secondary {
+    background-color: transparent;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.btn-hero-secondary:hover {
+    background-color: #111;
+    border-color: lime;
+}
+
+/* Estilos generales de la página de productos */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.categoria-seccion {
+    margin-bottom: 50px;
+}
+
+.categoria-seccion h2 {
+    font-size: 1.8rem;
+    color: lime; /* Combinando con el verde de tu marca */
+    border-bottom: 2px solid #222;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* Cuadrícula de Productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjeta individual de Producto */
+.producto-card {
+    background-color: #111111;
+    border: 1px solid #222222;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efecto visual al pasar el mouse por la tarjeta */
+.producto-card:hover {
+    transform: translateY(-5px);
+    border-color: lime;
+}
+
+/* Control estricto del tamaño de las imágenes */
+.producto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* Evita que las imágenes se distorsionen o estiren */
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.producto-card h3 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin: 10px 0;
+    min-height: 44px; /* Asegura alineación si un título es más largo que otro */
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para destacar el precio */
+.producto-card .precio {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: lime;
+    margin-top: auto; /* Empuja el precio siempre al fondo de la tarjeta */
+}
+
+/*seccion ubicacion*/
+
+/* Contenedor Principal de Ubicación */
+.ubicacion-container {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.ubicacion-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.ubicacion-container .subtitulo {
+    text-align: center;
+    color: #cccccc;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+/* Diseño en dos columnas (Responsivo) */
+.ubicacion-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Si la pantalla es chica (Celulares), se pone una columna arriba de otra */
+/*media (max-width: 768px) {
+    .ubicacion-layout {
+        grid-template-columns: 1fr;
+    }
+}*/
+
+/* Tarjetas de Información */
+.info-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background-color: #111111;
+    border: 1px solid #222222;
+    padding: 20px;
+    border-radius: 12px;
+    transition: border-color 0.3s ease;
+}
+
+.info-card:hover {
+    border-color: lime; /* Resalta en verde al pasar el mouse */
+}
+
+.info-card h3 {
+    color: lime;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.info-card p {
+    color: #e0e0e0;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* Contenedor del Mapa */
+.mapa-contenedor {
+    border-radius: 16px;
+    overflow: hidden; /* Redondea las esquinas del mapa de Google */
+    border: 1px solid #222222;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor General de Contacto */
+.contacto-container {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.contacto-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contacto-container .subtitulo {
+    text-align: center;
+    color: #cccccc;
+    margin-bottom: 50px;
+}
+
+/* Layout en dos columnas */
+.contacto-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/*@media (max-width: 768px) {
+    .contacto-layout {
+        grid-template-columns: 1fr;
+    }
+}*/
+
+/* Estilos de la sección de Redes */
+.contacto-redes h2, .contacto-formulario h2 {
+    color: lime;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.redes-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.red-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #111111;
+    border: 1px solid #222222;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.red-card:hover {
+    transform: translateX(5px);
+    border-color: lime;
+}
+
+.icono-social {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Estilos del Formulario */
+.contacto-formulario {
+    background-color: #111111;
+    border: 1px solid #222222;
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.form-group-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+}
+
+/* Estilización de los campos de texto y selectores */
+.contacto-formulario input[type="text"],
+.contacto-formulario input[type="email"],
+.contacto-formulario input[type="number"],
+.contacto-formulario select,
+.contacto-formulario textarea {
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    padding: 12px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contacto-formulario input:focus,
+.contacto-formulario select:focus,
+.contacto-formulario textarea:focus {
+    outline: none;
+    border-color: lime;
+}
+
+/* Radios y Checkbox */
+.form-group-radio {
+    margin-bottom: 18px;
+}
+
+.radio-options {
+    display: flex;
+    gap: 20px;
+    margin-top: 8px;
+}
+
+.form-group-checkbox {
+    margin-bottom: 25px;
+}
+
+/* Botones profesionales */
+.form-botones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.btn-primario, .btn-secundario {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primario {
+    background-color: lime;
+    color: #000000;
+    border: none;
+}
+
+.btn-primario:hover {
+    background-color: #00cc00;
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: #aaaaaa;
+    border: 1px solid #333333;
+}
+
+.btn-secundario:hover {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+
+/*seccion inico banner*/
+
+.hero-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(180deg, #050505 0%, #000000 100%);
+    border-bottom: 1px solid #111;
+}
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    color: #aaaaaa;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+/* Botones Estilizados */
+.btn-hero-primary {
+    background-color: lime;
+    color: #000;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.btn-hero-primary:hover {
+    background-color: #00cc00;
+    transform: translateY(-2px);
+}
+.btn-hero-secondary {
+    background-color: transparent;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.btn-hero-secondary:hover {
+    background-color: #111;
+    border-color: lime;
+}
+
+
+/*seccion inicio nuestro servicios*/
+
+/* Busca el contenedor de tus 3 servicios en el CSS y usa esto */
+.servicios-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Modifica la clase de tus tarjetas individuales */
+.servicio-card {
+    background-color: #0b0b0b;
+    border: 1px solid #1a1a1a;
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto interactivo profesional */
+.servicio-card:hover {
+    transform: translateY(-5px);
+    border-color: lime;
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.05);
+}
+
+
+ /*marcas*/
+ .marcas-section {
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #111;
+    margin-top: 60px;
+}
+.marcas-section p {
+    color: #555555;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+.marcas-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    opacity: 0.4; /* Se mantienen sutiles en el fondo */
+}
+.marcas-grid span {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+/*footer*/
+
+
+.site-footer {
+    background-color: #050505;
+    padding: 30px 20px;
+    border-top: 1px solid #111;
+    margin-top: 80px;
+    font-size: 0.9rem;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666666;
+}
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+.footer-links a {
+    color: #888888;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.footer-links a:hover {
+    color: lime;
+}
+
+/*@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}*/

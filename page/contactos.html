@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>praxis tecnologia</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+    <header>
+          <header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="../index.html" class="brand" aria-label="Praxis Tecnología - Inicio">
+        <img src="../media/praxis logo.jpeg" alt="Praxis Tecnología" class="header-logo">
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+        <ul class="menu">
+            <li><a href="../index.html">inicio</a></li>
+            <li><a href="./productos.html">productos</a></li>
+            <li><a href="./ubicacion.html">ubicacion</a></li>
+            <li><a href="#">contacto</a></li>
+        </ul>
+    </nav>
+  </div>
+</header>
+
+    </header>
+        <main class="contacto-container">
+    <h1>Contactos de la Empresa</h1>
+    <p class="subtitulo">Ponte en contacto con nosotros a través de nuestras redes o completando el formulario.</p>
+
+    <div class="contacto-layout">
+        <!-- Columna Izquierda: Redes Sociales -->
+        <div class="contacto-redes">
+            <h2>Canales Directos</h2>
+            <p>Toca los iconos para redirigirte directamente a nuestros chats:</p>
+            
+            <div class="redes-links">
+                <a href="https://wa.me+543794947476" target="_blank" class="red-card whatsapp">
+                    <img src="../media/whatsapp_logo.png" alt="WhatsApp" class="icono-social"> <!-- Cambia la ruta por tu logo de WP si es necesario -->
+                    <span>Chatea por WhatsApp</span>
+                </a>
+                
+                <a href="https://instagram.com" target="_blank" class="red-card instagram">
+                    <img src="../media/instagram.jfif" alt="Instagram" class="icono-social">
+                    <span>Síguenos en Instagram</span>
+                </a>
+                <a href="https://facebook.com" target="_blank" class="red-card facebook">
+                    <img src="../media/facebook logo.png" alt="facebook" class="icono-social">
+                    <span>Síguenos en Facebook</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Formulario Estilizado -->
+        <div class="contacto-formulario">
+            <h2>Envíanos un Mensaje</h2>
+            <form action="#">
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" required placeholder="Tu apellido">
+                    </div>
+                </div>
+
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label for="edad">Edad</label>
+                        <input type="number" id="edad" placeholder="Tu edad">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required placeholder="correo@ejemplo.com">
+                    </div>
+                </div>
+
+                <div class="form-group-radio">
+                    <label>Género:</label>
+                    <div class="radio-options">
+                        <label><input type="radio" name="genero" value="masculino"> Masculino</label>
+                        <label><input type="radio" name="genero" value="femenino"> Femenino</label>
+                        <label><input type="radio" name="genero" value="otro"> Otro</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pais">Selecciona un País</label>
+                    <select id="pais">
+                        <option value="argentina">Argentina</option>
+                        <option value="chile">Chile</option>
+                        <option value="uruguay">Uruguay</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" rows="5" required placeholder="Escribe tu consulta aquí..."></textarea>
+                </div>
+
+                <div class="form-group-checkbox">
+                    <label><input type="checkbox" required> Acepto términos y condiciones</label>
+                </div>
+
+                <div class="form-botones">
+                    <button type="reset" class="btn-secundario">Borrar</button>
+                    <button type="submit" class="btn-primario">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+
+<footer>
+         <footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; 2026 Praxis Tecnología. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="./productos.html">Productos</a>
+            <a href="./ubicacion.html">Ubicación</a>
+            <a href="./contactos.html">Contacto</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
