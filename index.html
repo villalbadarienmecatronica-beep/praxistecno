@@ -5,27 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>praxis tecnologia</title>
     <link rel="stylesheet" href="./CSS/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
 </head>
 <body>
 
     <head>
-<header class="site-header" id="siteHeader">
- <div class="container header-inner">
-    <a href="#top" class="brand" aria-label="Praxis Tecnología - Inicio">
-        <img src="./media/praxis logo.jpeg" alt="Praxis Tecnología" class="header-logo">
-    </a>
+<header class="site-header navbar navbar-expand-lg py-0" id="siteHeader">
+    <div class="container header-inner">
+        <a href="./index.html" class="brand navbar-brand" aria-label="Praxis Tecnología - Inicio">
+            <img src="./media/praxis logo.jpeg" alt="Praxis Tecnología" class="header-logo elemento-flotante">
+        </a>
 
-    <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
-    <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
-        <ul class="menu">
-            <li><a href="#">inicio</a></li>
-            <li><a href="./page/productos.html">productos</a></li>
-            <li><a href="./page/ubicacion.html">ubicacion</a></li>
-            <li><a href="./page/contactos.html">contacto</a></li>
-        </ul>
-    </nav>
-  </div>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Navegación principal">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <nav class="collapse navbar-collapse justify-content-end main-nav" id="mainNav" aria-label="Navegación principal">
+            <ul class="menu navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="#">inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="./page/productos.html">productos</a></li>
+                <li class="nav-item"><a class="nav-link" href="./page/ubicacion.html">ubicacion</a></li>
+                <li class="nav-item"><a class="nav-link" href="./page/contactos.html">contacto</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
+
          <section class="hero-section">
     <div class="hero-content">
         <h1>Productos y Soluciones Informáticas a tu Medida</h1>
@@ -49,59 +55,151 @@
     </div>
 </section>
 
+<div class="container my-5">
+
+    <div id="miCarrusel" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner rounded shadow">
+            
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="./media/monitores.png" class="d-block w-100" alt="Soporte y Tecnología" style="height: 450px; object-fit: contain;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                    <h5>productos informaticos</h5>
+                    <p>Monitores, notebooks, impresoras, tintas, perifericos.</p>
+                </div>
+            </div>
+            <!-- Imagen 2 -->
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="./media/taller-2.jpeg" class="d-block w-100" alt="Ciberseguridad" style="height: 450px; object-fit: contain;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                    <h5>Servicio tecnico oficial</h5>
+                    <p>Servicio técnico especializado para la reparación y mantenimiento de equipos informáticos.</p>
+                </div>
+            </div>
+            <!-- Imagen 3 -->
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="./media/libreria.png" class="d-block w-100" alt="Desarrollo Web" style="height: 450px; object-fit: contain;">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                    <h5>Articulos de libreria</h5>
+                    <p>Libros, cuadernos, biromes, y otros artículos de papelería.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Controles de navegación lateral -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#miCarrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#miCarrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <section class="mb-5">
+        <h2 class="text-success mb-4 text-center">¿Por qué elegirnos?</h2>
+        <div class="accordion" id="acordeonPorQueElegirnos">
+
+
+            <div class="accordion-item bg-dark text-light border-secondary">
+                <h3 class="accordion-header" id="headingOne">
+                    <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Experiencia y Profesionalismo
+                    </button>
+                </h3>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#acordeonPorQueElegirnos">
+                    <div class="accordion-body">
+                        Contamos con más de 10 años de trayectoria ofreciendo asistencia rápida, eficaz y transparente en el sector tecnológico.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-dark text-light border-secondary">
+                <h3 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Minimización de Tiempos de Inactividad
+                    </button>
+                </h3>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#acordeonPorQueElegirnos">
+                    <div class="accordion-body">
+                        Entendemos que la tecnología es el motor de tu proyecto moderno, por lo que nos enfocamos en mantener tus sistemas operando al máximo rendimiento.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-dark text-light border-secondary">
+                <h3 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Soluciones Personalizadas a Medida
+                    </button>
+                </h3>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#acordeonPorQueElegirnos">
+                    <div class="accordion-body">
+                        No ofrecemos soluciones genéricas; adaptamos cada servicio de soporte, desarrollo o seguridad a las necesidades exactas de tu infraestructura.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     
-    <main style="padding: 40px 20px; max-width: 1000px; margin: 0 auto;">
 
-        <!-- Sección de Bienvenida / Hero -->
-        <section id="inicio" style="margin-bottom: 50px;">
-            <h1 style="font-size: 2.5rem; margin-bottom: 15px;">Productos y Soluciones Informáticas a tu Medida</h1>
-            <p style="font-size: 1.2rem; line-height: 1.6; color: #cccccc;">
-                Impulsamos tu infraestructura tecnológica con servicios integrales de soporte informático, 
-                desarrollo de software y seguridad digital. Mantenemos tus sistemas operando al máximo rendimiento.
-            </p>
-        </section>
-
-        <!-- Sección de Servicios / Características -->
-        <section id="servicios" style="margin-bottom: 50px;">
-            <h2 style="font-size: 1.8rem; margin-bottom: 20px; color: lime;">Nuestros Servicios</h2>
-            
-            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-                <!-- Servicio 1 -->
-                <article style="border: 1px solid #333; padding: 20px; border-radius: 8px; flex: 1 1 250px;">
-                    <h3 style="margin-bottom: 10px;">Soporte Técnico & Mantenimiento</h3>
-                    <p style="line-height: 1.5; color: #aaaaaa;">
-                        Diagnóstico, reparación y mantenimiento preventivo de equipos de cómputo, servidores y redes locales.
-                    </p>
-                </article>
-
-                <!-- Servicio 2 -->
-                <article style="border: 1px solid #333; padding: 20px; border-radius: 8px; flex: 1 1 250px;">
-                    <h3 style="margin-bottom: 10px;">Ciberseguridad</h3>
-                    <p style="line-height: 1.5; color: #aaaaaa;">
-                        Protección de datos empresariales, auditorías de seguridad, eliminación de malware y respaldo en la nube.
-                    </p>
-                </article>
-
-                <!-- Servicio 3 -->
-                <article style="border: 1px solid #333; padding: 20px; border-radius: 8px; flex: 1 1 250px;">
-                    <h3 style="margin-bottom: 10px;">Desarrollo Web & Software</h3>
-                    <p style="line-height: 1.5; color: #aaaaaa;">
-                        Creación de plataformas web optimizadas, aplicaciones a medida y soluciones en la nube para optimizar tu negocio.
-                    </p>
-                </article>
+    <section class="mb-5">
+        <h2 class="text-success mb-4 text-center">Preguntas Frecuentes</h2>
+        <div class="accordion" id="acordeonFAQ">
+            <!-- Pregunta 1 -->
+            <div class="accordion-item bg-dark text-light border-secondary">
+                <h3 class="accordion-header" id="faqOne">
+                    <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqOne" aria-expanded="true" aria-controls="collapseFaqOne">
+                        ¿Cómo puedo solicitar un presupuesto para mi empresa?
+                    </button>
+                </h3>
+                <div id="collapseFaqOne" class="accordion-collapse collapse show" aria-labelledby="faqOne" data-bs-parent="#acordeonFAQ">
+                    <div class="accordion-body">
+                        Puedes hacer clic en el botón de "Solicitar Presupuesto" en la parte superior o escribirnos directamente a través de nuestra sección de contacto para evaluar tu caso.
+                    </div>
+                </div>
             </div>
-        </section>
+            <!-- Pregunta 2 -->
+            <div class="accordion-item bg-dark text-light border-secondary">
+                <h3 class="accordion-header" id="faqTwo">
+                    <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqTwo" aria-expanded="false" aria-controls="collapseFaqTwo">
+                        ¿Ofrecen soporte técnico remoto y presencial?
+                    </button>
+                </h3>
+                <div id="collapseFaqTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#acordeonFAQ">
+                    <div class="accordion-body">
+                        Sí, brindamos asistencia remota inmediata para incidencias de software y soporte presencial programado o de emergencia para infraestructura de cómputo y redes locales.
+                    </div>
+                </div>
+            </div>
+            <!-- Pregunta 3 -->
+            <div class="accordion-item bg-dark text-light border-secondary">
+                <h3 class="accordion-header" id="faqThree">
+                    <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqThree" aria-expanded="false" aria-controls="collapseFaqThree">
+                        ¿Cuál es el tiempo de respuesta estimado ante una emergencia?
+                    </button>
+                </h3>
+                <div id="collapseFaqThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#acordeonFAQ">
+                    <div class="accordion-body">
+                        Depende del tipo de contrato de mantenimiento que poseas, pero nuestros canales de emergencia priorizan incidencias críticas para reducir el tiempo de inactividad al mínimo.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Sección Sobre Nosotros -->
-        <section id="nosotros" style="margin-bottom: 50px;">
-            <h2 style="font-size: 1.8rem; margin-bottom: 15px; color:lime;">¿Por qué elegirnos?</h2>
-            <p style="line-height: 1.6; color: #cccccc; margin-bottom: 15px;">
-                Con más de 10 años de experiencia en el sector tecnológico, ofrecemos asistencia rápida, eficaz y transparente. 
-                Entendemos que la tecnología es el motor de cualquier proyecto moderno, por lo que nos enfocamos en minimizar 
-                tiempos de inactividad y maximizar la eficiencia de tus sistemas.
-            </p>
-        </section>
+    <section class="text-center mb-5">
+        <h3 class="text-light mb-3">tu lugar de confianza</h3>
+        <img src="./media/praxis logo.jpeg" class="img-fluid rounded shadow border border-secondary elemento-flotante" alt="Infraestructura tecnológica" style="max-height: 400px; width: auto;">
+    </section>
+</div>
+    
+    <main style="padding: 40px 20px; max-width: 1000px; margin: 0 auto;">
 
     </main>
 
@@ -115,6 +213,19 @@
             <a href="./page/contactos.html">Contacto</a>
         </div>
     </div>
+
+    <a href="https://wa.me/5493482581648?text=Hola,%20necesito%20más%20información%20sobre%20sus%20servicios." 
+       class="whatsapp-float" 
+       target="_blank" 
+       aria-label="Comunicarse por WhatsApp">
+        <img src="./media/whatsapp_logo.png" width="35" height="35" fill="#ffffff" class="bi bi-whatsapp" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.558 6.558 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.347.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.342-.116-.007-.249-.007-.382-.007a.729.729 0 0 0-.527.247c-.182.198-.694.676-.694 1.65 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.078.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </img>
+    </section>
+
+
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </body>
 </html>

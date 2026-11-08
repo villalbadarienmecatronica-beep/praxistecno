@@ -54,7 +54,7 @@ nav a:hover {
     align-items: center;
 }
 
-.menu {
+.menu- {
     display: flex;
     list-style-type: none;
     padding: 35px;
@@ -244,12 +244,12 @@ main h1 {
     align-items: start;
 }
 
-/* Si la pantalla es chica (Celulares), se pone una columna arriba de otra */
-/*media (max-width: 768px) {
+ /*Si la pantalla es chica (Celulares), se pone una columna arriba de otra */
+@media (max-width: 768px) {
     .ubicacion-layout {
         grid-template-columns: 1fr;
     }
-}*/
+}
 
 /* Tarjetas de Información */
 .info-contacto {
@@ -318,11 +318,11 @@ main h1 {
     align-items: start;
 }
 
-/*@media (max-width: 768px) {
+@media (max-width: 768px) {
     .contacto-layout {
         grid-template-columns: 1fr;
     }
-}*/
+}
 
 /* Estilos de la sección de Redes */
 .contacto-redes h2, .contacto-formulario h2 {
@@ -571,7 +571,7 @@ main h1 {
     align-items: center;
     gap: 50px;
     flex-wrap: wrap;
-    opacity: 0.4; /* Se mantienen sutiles en el fondo */
+    opacity: 0.4; 
 }
 .marcas-grid span {
     font-weight: bold;
@@ -610,10 +610,107 @@ main h1 {
     color: lime;
 }
 
-/*@media (max-width: 600px) {
+@media (max-width: 600px) {
     .footer-content {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
-}*/
+}
+body {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.container, .container-fluid {
+    background-color: transparent; 
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+        padding: 30px;
+    }
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 150px 150px;
+        grid-template-areas: 
+            "header header header"
+            "sidebar main .";
+        padding: 10px;
+        column-gap: 10px;
+        row-gap: 20px;
+    }
+}
+
+/* Mobile /
+/ Regla / / Medio / / Tarea */
+@media only screen and (max-width: 480px) {
+body {
+background-color: #F09A90;
+}
+}
+/* Tablet */
+@media only screen and (min-width: 481px) and (max-width: 978px) {
+body {
+background-color: #F5CF8E;
+}
+}
+/* Desktop */
+@media only screen and (min-width: 979px) {
+body {
+background-color: #B2D6FF;
+}
+}
+/* Ajustes para el menú hamburguesa desplegado en móviles */
+@media (max-width: 991.98px) {
+    .site-header .navbar-collapse {
+        padding: 1rem 0;
+    }
+    .site-header .menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .site-header .menu a {
+        color: #000000 !important; /* Color negro para hacer contraste sobre el verde */
+        font-weight: bold;
+    }
+}
+
+@keyframes flotarSuave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px); 
+    }
+}
+
+.elemento-flotante {
+    animation: flotarSuave 4s ease-in-out infinite;
+}
+
+.whatsapp-float {
+    position: fixed;       
+    bottom: 25px;          
+    right: 25px;           
+    background-color: #25d366;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;         
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #20ba5a;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 255, 0, 0.4);
+}
